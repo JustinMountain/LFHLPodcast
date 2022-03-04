@@ -118,6 +118,7 @@ header {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--clr-white);
+  padding-top: 1.5rem;
 }
 
 .headline-highlight {
@@ -129,7 +130,7 @@ header {
   max-width: 15rem;
   margin: 0 auto;
   color: var(--clr-white);
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   padding-bottom: 5rem;
 }
 
@@ -137,11 +138,27 @@ header {
 .section-call-to-action {
   background-color: var(--clr-white);
   text-align: center;
-  padding: 4rem var(--padding-master);
+  padding: 4rem var(--padding-master) 3rem var(--padding-master);
+}
+
+.listen-container {
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: 
+    "anchor anchor"
+    "anchor anchor"
+    "apple spotify"
+    "youtube google";
+  align-items: center;
+  justify-items: center;
+  margin: auto;
 }
 
 .section-call-to-action img {
   max-width: 95%;
+  border-radius: 2rem;
 }
 
 .listen-now {
@@ -150,39 +167,28 @@ header {
   max-width: 25rem;
   margin: 0 auto;
   color: var(--clr-blue);
-  padding-bottom: 2rem;
-}
-
-.preferred-platform {
-  padding-bottom: 2rem;
-}
-
-.preferred-platform img {
-  border-radius: 2rem;
-}
-
-.other-platforms {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
-.other-platforms img {
-  max-width: 128px;
-  flex-basis: 50%;
-}
-
-.other-platforms img:nth-child(1) {
-  margin-right: 2rem;
   padding-bottom: 3rem;
 }
 
-.other-platforms img:nth-child(2) {
-  margin-left: 2rem;
-  padding-bottom: 3rem;
+#listen-anchor {
+  grid-area: anchor;
+  padding-bottom: 2rem;
+}
+
+#listen-apple {
+  grid-area: apple;
+}
+
+#listen-spotify {
+  grid-area: spotify;
+}
+
+#listen-youtube {
+  grid-area: youtube;
+}
+
+#listen-google {
+  grid-area: google;
 }
 
 /* Social Media */
@@ -197,6 +203,8 @@ header {
   text-transform: uppercase;
   font-size: 2rem;
   line-height: 2.125rem;
+  max-width: 20rem;
+  margin: 0 auto;
 }
 
 .like-subscribe {
@@ -204,12 +212,13 @@ header {
   text-transform: uppercase;
   line-height: 1.125rem;
   font-weight: 400;
+  padding: 1rem 0;
 }
 
 .youtube-link {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 720px;
   padding-bottom: 56.25%; 
   height: 0;  
   margin: 3rem auto;
@@ -221,6 +230,40 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.all-platforms {
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+    "youtube twitter"
+    "facebook instagram";
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+#social-youtube {
+  grid-area: youtube;
+}
+
+#social-twitter {
+  grid-area: twitter;
+}
+
+#social-facebook {
+  grid-area: facebook;
+}
+
+#social-instagram {
+  grid-area: instagram;
+}
+
+.all-platforms img {
+  max-width: 100%;
+  padding: 1rem;
 }
 
 /* Mailing List */
@@ -279,3 +322,21 @@ footer {
 .footer-nav a:focus {
   color: var(--clr-gold);
 }
+
+
+
+
+
+/* large screen size 
+.listen-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+    "anchor anchor apple spotify"
+    "anchor anchor youtube google";
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+
+} */
