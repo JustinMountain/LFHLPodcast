@@ -20,6 +20,7 @@ Contents
 /* Variables and Document-Level Classes */
 :root {
   --clr-black: hsla(0, 0%, 0%, 1);
+  --clr-nav-black: hsla(0, 0%, 0%, .75);
   --clr-gold: hsla(42, 82%, 43%, 1);
   --clr-red: hsla(350, 85%, 42%, 1);
   --clr-blue: hsla(219, 100%, 18%, 1);
@@ -29,6 +30,8 @@ Contents
   --ff-mono: 'Roboto Mono', monospace;
 
   --padding-master: max(2rem, 8%);
+  --navigation-height: 5rem;
+  --logo-height: 2.5rem; /* should be half nav-height */
 }
 
 .visuallyhidden {
@@ -53,29 +56,95 @@ footer {
 /* Document Styling */
 /* Header */
 header {
-  background-color: var(--clr-black);
-}
-
-.navigation {
+  background-color: var(--clr-nav-black);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
   display: flex;
   align-items: center;
-  height: 6rem;
-  margin-left: var(--padding-master);
-  margin-right: var(--padding-master);
-}
-
-.logo {
-  width: 60%;
+  height: var(--navigation-height);
+  justify-content: space-between;
+  padding-left: var(--padding-master);
+  padding-right: var(--padding-master);
 }
 
 .logo-image {
-  height: 3rem;
+  height: var(--logo-height);
 } 
 
 .main-nav {
-  width: 40%;
+  position: absolute;
+  text-align: right;
+  top: 100%;
+  right: 0;
+  padding-right: var(--padding-master);
+  background-color: var(--clr-nav-black);
+  width: 100%;
 }
 
+.main-nav li {
+  padding-bottom: 2rem;
+}
+
+.main-nav li:nth-child(1) {
+  padding-top: 1rem;
+}
+
+.main-nav a {
+  color: var(--clr-white);
+  text-decoration: none;
+  opacity: 0;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--clr-gold);
+}
+
+nav {
+  transform: scale(1, 0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: top;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 100ms;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-burger span,
+.nav-toggle-burger span::before,
+.nav-toggle-burger span::after {
+  background: white;
+  height: 0.125rem;
+  width: 2rem;
+  display: block;
+  border-radius: 3rem;
+}
+
+.nav-toggle-burger span::before,
+.nav-toggle-burger span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-burger span::before {
+  top: 2rem;
+}
+
+.nav-toggle-burger span::after {
+  bottom: 2rem;
+}
+
+/* Desktop navigation
 .main-nav ul {
   display: flex;
   justify-content: flex-end;
@@ -93,12 +162,13 @@ header {
 .main-nav a:hover,
 .main-nav a:focus {
   color: var(--clr-gold);
-}
+} */
 
 /* Hero Section */
 .section-hero {
   background: var(--clr-black);
   background: linear-gradient(160deg, var(--clr-black) 35%, var(--clr-red) 70%, var(--clr-gold) 100%);
+  padding-top: var(--navigation-height);
 }
 
 .hero-image img {

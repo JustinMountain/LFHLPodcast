@@ -1,5 +1,8 @@
 # LFHLPodcast
 
+2022-03-05
+ - Mobile-first navigation
+
 2022-03-03
  - Added social links and images
  - Adjusted some parts to grid
