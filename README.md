@@ -2,6 +2,8 @@
 
 2022-03-05
  - Mobile-first navigation
+ - Header and Footer styles completed
+ - Header and Footer styles pulled to separate style sheet
 
 2022-03-03
  - Added social links and images
@@ -15,10 +17,10 @@
  - Initialized files, CSS Reset, HTML Boilerplate
 
 TODO:
- - Add e-mail submission form
  - Finalize mobile-first layout
    - Adjust navbar for mobile/desktop
  - Complete Desktop layout with break points
+ - Add e-mail submission form
  - Fix youtube link scaling
  - Customize scrollbar
  - API to search for latest YouTube/Insta posts
