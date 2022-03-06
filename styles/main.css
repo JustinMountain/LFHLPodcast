@@ -7,7 +7,7 @@ Contents
     Hero Section
     Call to Action
     Social Media
-    Mailing List
+    Contact Us
 */
 
 /* Fonts - Roboto and Roboto Mono */
@@ -26,13 +26,8 @@ Contents
   --ff-main: 'Roboto', sans-serif;
   --ff-mono: 'Roboto Mono', monospace;
 
-  --padding-master: min(10rem, 8%);
+  --padding-master: 8%;
   --navigation-height: 4rem;
-
-  --font-scaling-title-small: clamp(1.25rem, 6vw, 2rem);
-  --font-scaling-sub-small: clamp(0.5rem, 10vw, 1rem);
-  --font-scaling-title-large: clamp(2rem, 4vw, 3rem);
-  --font-scaling-sub-large: clamp(1rem, 2vw, 1.25rem);
 }
 
 /* Typography */
@@ -73,7 +68,7 @@ footer {
 }
 
 .headline {
-  font-size: var(--font-scaling-title-small);
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--clr-white);
   padding-top: 1.5rem;
@@ -84,13 +79,23 @@ footer {
 }
 
 .byline {
-  font-size: var(--font-scaling-sub-small);
+  font-size: 0.875rem;
   font-weight: 400;
   max-width: 15rem;
   margin: 0 auto;
   color: var(--clr-white);
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 50rem) {
+  .headline {
+    font-size: 2rem;
+  }
+
+  .byline {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 64rem) {
@@ -117,13 +122,8 @@ footer {
     margin-left: 0;
   }
 
-  .headline {
-    font-size: var(--font-scaling-title-large);
-  }
-
   .byline {
-    font-size: var(--font-scaling-sub-large);
-    max-width: 20.5rem;
+    max-width: 18rem;
     margin: 0;
   }
 }
@@ -141,9 +141,9 @@ footer {
 }
 
 .listen-now {
-  font-size: var(--font-scaling-title-small);
+  font-size: 1.5rem;
   font-weight: 400;
-  max-width: 25rem;
+  max-width: 20rem;
   margin: 0 auto;
   color: var(--clr-blue);
   padding-bottom: 3rem;
@@ -185,10 +185,16 @@ footer {
   grid-area: google;
 }
 
+@media screen and (min-width: 32.5rem) {
+  .listen-now {
+    font-size: 1.75rem;
+  }
+}
+
 @media screen and (min-width: 50rem) {
   .listen-now {
     max-width: 60rem;
-    font-size: var(--font-scaling-title-large);
+    font-size: 2rem;
   }
 }
 
@@ -225,9 +231,8 @@ footer {
 .socials {
   color: var(--clr-red);
   text-transform: uppercase;
-  font-size: var(--font-scaling-title-small);
+  font-size: 1.25rem;
   line-height: 1.5rem;
-  /* max-width: 12rem; */
   font-weight: 400;
   margin: 0 auto;
 }
@@ -235,7 +240,7 @@ footer {
 .like-subscribe {
   color: var(--clr-gold);
   text-transform: uppercase;
-  font-size: var(--font-scaling-sub-small);
+  font-size: 0.875rem;
   line-height: 1.125rem;
   font-weight: 400;
   max-width: 10rem;
@@ -261,7 +266,7 @@ footer {
 }
 
 .all-platforms {
-  max-width: 25rem;
+  max-width: 18rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -298,9 +303,15 @@ footer {
   grid-area: instagram;
 }
 
-@media screen and (min-width: 510px) {
+@media screen and (min-width: 32.5rem) {
+  .section-social-media {
+    padding: 5rem var(--padding-master) 7rem var(--padding-master);
+  }
+  
   .socials {
     max-width: 35rem;
+    font-size: 1.675rem;
+    font-weight: 500;
   }
 
   .like-subscribe {
@@ -308,23 +319,39 @@ footer {
   }
 
   .all-platforms {
-    max-width: 35rem;
+    max-width: 20rem;
+  }
+}
+
+@media screen and (min-width: 44rem) {
+  .socials {
+    font-size: 2.25rem;
+  }
+
+  .like-subscribe {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .section-social-media {
+    padding: 6rem var(--padding-master) 8rem var(--padding-master);
   }
 }
 
 @media screen and (min-width: 64rem) {
   .section-social-media {
-    padding: 5rem var(--padding-master) 10rem var(--padding-master);
+    padding: 6rem var(--padding-master) 10rem var(--padding-master);
   }
 
   .all-platforms {
-    max-width: 50rem;
+    max-width: 40rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas: 
       "youtube twitter facebook instagram";
     height: auto;
-    padding-top: 3rem;
+    padding: 5rem 0 2rem 0;
   }
 
   .youtube-link {
@@ -338,38 +365,105 @@ footer {
   }
 }
 
-/* Mailing List */
-.section-mailing-list {
+/* Contact Us */
+.section-contact {
   background-color: var(--clr-white);
   text-align: center;
   padding: 3rem var(--padding-master);
   color: var(--clr-blue);
 }
 
-.first-to-know {
+.section-contact img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.contact-us {
   text-transform: uppercase;
-  font-size: var(--font-scaling-title-small);
+  font-size: 1.5rem;
   font-weight: 700;
+  padding-top: 2rem;
 }
 
-.mailing-action {
-  font-size: var(--font-scaling-sub-small);
+.get-in-touch {
+  font-size: 0.875rem;
   font-weight: 300;
-  padding: 1rem 0 2rem 0;
-  max-width: 13rem;
-  margin: 0 auto;
+  padding-bottom: 1rem;
 }
 
-@media screen and (min-width: 400px) {
-  .mailing-action {
-    max-width: 22rem;
+.mail-to {
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 32.5rem) {
+  .contact-us {
+    font-size: 2rem;
+    padding-top: 3rem;
+  }
+
+  .get-in-touch {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .mail-to {
+    font-size: 1.5rem;
+    padding: 1rem 0;
   }
 }
 
-.section-mailing-list input {
-  width: 100%;
-  border: 1px solid var(--clr-blue);
-  border-radius: 0.25rem;
-  line-height: 1.5rem;
-  padding: 0 1rem;
+@media screen and (min-width: 44rem) {
+  .contact-us {
+    font-size: 2.5rem;
+    padding-top: 3rem;
+  }
+
+  .get-in-touch {
+    font-size: 1.375rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .mail-to {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+      "cdn-tire-center contact-info";
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+  }
+  
+  .cdn-tire-center {
+    grid-area: cdn-tire-center;
+  }
+
+  .contact-info {
+    grid-area: contact-info;
+  }
+
+  .contact-us {
+    font-size: 1.75rem;
+    padding-top: 2rem;
+  }
+
+  .get-in-touch {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .mail-to {
+    font-size: 1.25rem;
+    padding: 1rem 0;
+  }
 }

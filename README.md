@@ -1,5 +1,13 @@
 # LFHLPodcast
 
+2022-03-06
+ - Changed Mailing List to Contact Us
+ - Responsiveness 
+  - Adjusted clamp() font sizes to change at set break points
+ - Navbar
+  - Added chapters for links
+  - Added JS to close when link clicked
+
 2022-03-05
  - Mobile-first navigation
  - Header and Footer styles completed
@@ -20,6 +28,7 @@
  - Initialized files, CSS Reset, HTML Boilerplate
 
 TODO:
- - Add e-mail submission form
+ - Larger screen sizes
+ - Style contact us link
  - Customize scrollbar
  - API to search for latest YouTube/Insta posts

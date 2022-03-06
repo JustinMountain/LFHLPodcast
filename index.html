@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leafs Fans in Hostile Lands Podcast</title>
+
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header-footer.css">
+
   </head>
 
   <body>
@@ -28,20 +30,39 @@
       <nav class="main-nav">
         <ul>
           <li>
-            <a href="index.html">Home</a>
+            <a href="#ch-top">
+              <div id="nav-top">
+                Top
+              </div>
+            </a>
           </li>
           <li>
-            <a href="#">Listen</a>
+            <a href="#ch-listen">
+              <div id="nav-listen">
+                Listen
+              </div>
+            </a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#ch-social">
+              <div id="nav-social">
+                Socials
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#ch-contact">
+              <div id="nav-contact">
+                Contact
+              </div>
+            </a>
           </li>
         </ul>
       </nav>  
     </header>
 
     <main>
-      <section class="section-hero">
+      <section class="section-hero" id="ch-top">
         <div class="hero-image">
           <img src="images/hero-image.png" alt="Leafs Fans in Hostile Lands Podcast">
         </div>
@@ -51,7 +72,7 @@
         </div>
       </section>
 
-      <section class="section-call-to-action">
+      <section class="section-call-to-action" id="ch-listen">
         <h2 class="listen-now">Listen on your favourite podcast app</h2>
         <div class="listen-container">
           <div id="listen-anchor">
@@ -72,8 +93,8 @@
         </div>
       </section>
 
-      <section class="section-social-media">
-        <h2 class="socials">Follow us on social media</h2>
+      <section class="section-social-media" id="ch-social">
+        <h2 class="socials" id=>Follow us on social media</h2>
         <h3 class="like-subscribe">Don't forget to like and subscribe!</h3>
 
         <div class="all-platforms">
@@ -97,13 +118,17 @@
         <!-- Possibly include some instagram image links -->
       </section>
 
-      <section class="section-mailing-list">
-        <h2 class="first-to-know">Be the first to know</h2>
-        <h3 class="mailing-action">Stay on top of the discussion and get notifications when new episodes drop</h3>
-        <div class="email-submission">
-          <input type="text" placeholder="Your e-mail here">
+      <section class="section-contact" id="ch-contact">
+        <div class="contact-container">
+          <div class="cdn-tire-center">
+            <img src="images/contact-splash.jpg">
+          </div>
+          <div class="contact-info">
+            <h2 class="contact-us">Contact Us</h2>
+            <h3 class="get-in-touch">Get in touch with our team at</h3>
+            <h4 class="mail-to">lfhlpodcast@gmail.com</h4>    
+          </div>
         </div>
-        <div class="submit">Submit</div>
       </section>
     </main> 
     
@@ -117,5 +142,8 @@
     </footer>
   </footer>
   </body>
+
+  <script src="scripts/navbar.js" async></script>
+
 <!-- Leafs Fans in Hostile Lands Podcast site designed and implemented by Justin Mountain -->
 </html>
