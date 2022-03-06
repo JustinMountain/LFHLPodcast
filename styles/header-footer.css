@@ -6,8 +6,8 @@ header {
   z-index: 999;
   display: flex;
   align-items: center;
-  height: var(--navigation-height);
   justify-content: space-between;
+  height: var(--navigation-height);
   padding-left: var(--padding-master);
   padding-right: var(--padding-master);
 }

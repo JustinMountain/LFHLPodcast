@@ -26,7 +26,8 @@ Contents
   --ff-main: 'Roboto', sans-serif;
   --ff-mono: 'Roboto Mono', monospace;
 
-  --padding-master: 8%;
+  --padding-master: 10%;
+  --padding-master-large: max(12%, calc((100% - 1440px) / 2) ) ;
   --navigation-height: 4rem;
 }
 
@@ -36,6 +37,7 @@ html {
   font-size: 1.125rem;
   font-weight: 500;
   max-width: 1920px;
+  background-color: black;
  }
 
 header,
@@ -46,6 +48,12 @@ footer {
 }
 
 /* Document Styling */
+
+@media screen and (min-width: 1680px) {
+  :root {
+    --padding-master: var(--padding-master-large);
+  }
+}
 
 /* Hero Section */
 .section-hero {
@@ -125,6 +133,17 @@ footer {
   .byline {
     max-width: 18rem;
     margin: 0;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .headline {
+    font-size: 2.5rem;
+  }
+
+  .byline {
+    font-size: 1.25rem;
+    max-width: 21rem;
   }
 }
 
@@ -221,6 +240,12 @@ footer {
   }
 }
 
+@media screen and (min-width: 80rem) {
+  .listen-now {
+    font-size: 2.5rem;
+  }
+}
+
 /* Social Media */
 .section-social-media {
   background-color: var(--clr-black);
@@ -310,7 +335,7 @@ footer {
   
   .socials {
     max-width: 35rem;
-    font-size: 1.675rem;
+    font-size: 1.6rem;
     font-weight: 500;
   }
 
@@ -325,7 +350,7 @@ footer {
 
 @media screen and (min-width: 44rem) {
   .socials {
-    font-size: 2.25rem;
+    font-size: 2.125rem;
   }
 
   .like-subscribe {
@@ -365,11 +390,23 @@ footer {
   }
 }
 
+@media screen and (min-width: 80rem) {
+  .socials {
+    font-size: 2.75rem;
+    max-width: 50rem;
+  }
+
+  .like-subscribe {
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
 /* Contact Us */
 .section-contact {
   background-color: var(--clr-white);
   text-align: center;
-  padding: 3rem var(--padding-master);
+  padding: 4rem var(--padding-master) 3rem var(--padding-master);
   color: var(--clr-blue);
 }
 
@@ -392,11 +429,31 @@ footer {
 }
 
 .mail-to {
+  max-width: 18rem;
+  margin: 0 auto;
   font-size: 1rem;
-  padding-top: 1rem;
+  padding: 2rem 0;
+}
+
+.mail-to a {
+  border: 1px solid var(--clr-blue);
+  border-radius: 100vw;
+  color: var(--clr-blue);
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+}
+
+.mail-to a:hover {
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+  border-radius: 100vw;;
 }
 
 @media screen and (min-width: 32.5rem) {
+  .section-contact {
+    padding: 5rem var(--padding-master) 4rem var(--padding-master);
+  }
+
   .contact-us {
     font-size: 2rem;
     padding-top: 3rem;
@@ -410,11 +467,16 @@ footer {
 
   .mail-to {
     font-size: 1.5rem;
-    padding: 1rem 0;
+    max-width: 22rem;
   }
 }
 
 @media screen and (min-width: 44rem) {
+  .section-contact {
+    padding: 6rem var(--padding-master) 5rem var(--padding-master);
+  }
+
+
   .contact-us {
     font-size: 2.5rem;
     padding-top: 3rem;
@@ -428,10 +490,15 @@ footer {
 
   .mail-to {
     font-size: 1.75rem;
+    max-width: 25rem;
   }
 }
 
 @media screen and (min-width: 64rem) {
+  .section-contact {
+    padding: 5rem var(--padding-master);
+  }
+
   .contact-container {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -464,6 +531,34 @@ footer {
 
   .mail-to {
     font-size: 1.25rem;
-    padding: 1rem 0;
+  }
+
+  .mail-to a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .section-contact {
+    padding: 6rem var(--padding-master);
+  }
+
+  .contact-us {
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
+  .get-in-touch {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .mail-to {
+    font-size: 1.5rem;
+  }
+  
+  .mail-to a {
+    padding: 0.5rem 1.5rem;
   }
 }

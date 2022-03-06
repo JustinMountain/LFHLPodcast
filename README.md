@@ -2,8 +2,10 @@
 
 2022-03-06
  - Changed Mailing List to Contact Us
+ - Styled contact us link 
  - Responsiveness 
   - Adjusted clamp() font sizes to change at set break points
+  - Updated for large screen size (to 1920px and beyond)
  - Navbar
   - Added chapters for links
   - Added JS to close when link clicked
@@ -28,7 +30,6 @@
  - Initialized files, CSS Reset, HTML Boilerplate
 
 TODO:
- - Larger screen sizes
- - Style contact us link
  - Customize scrollbar
+ - Add all appropriate links
  - API to search for latest YouTube/Insta posts
