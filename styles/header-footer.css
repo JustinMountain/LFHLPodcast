@@ -13,7 +13,7 @@ header {
 }
 
 .logo-image {
-  height: var(--logo-height);
+  height: calc( var(--navigation-height) / 2);
 } 
 
 .main-nav {
@@ -157,6 +157,7 @@ footer {
   background-color: var(--clr-black);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: var(--navigation-height);
   padding-left: var(--padding-master);
   padding-right: var(--padding-master);
@@ -165,8 +166,27 @@ footer {
 .copyright {
   font-family: var(--ff-main);
   color: var(--clr-white);
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-weight: 400;
   font-size: 0.5rem;
   text-transform: none;
+}
+
+.pod-name {
+  font-family: var(--ff-main);
+  color: var(--clr-white);
+  /* margin: 0 auto; */
+  font-weight: 400;
+  font-size: 0.5rem;
+  text-transform: none;
+}
+
+@media screen and (min-width: 500px) {
+  .copyright {
+    font-size: 0.75rem;
+  }
+
+  .pod-name {
+    font-size: 0.75rem;
+  }
 }

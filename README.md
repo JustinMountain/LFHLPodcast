@@ -4,6 +4,7 @@
  - Mobile-first navigation
  - Header and Footer styles completed
  - Header and Footer styles pulled to separate style sheet
+ - Font scaling implemented for responsiveness
 
 2022-03-03
  - Added social links and images
@@ -18,7 +19,6 @@
 
 TODO:
  - Finalize mobile-first layout
-   - Adjust navbar for mobile/desktop
  - Complete Desktop layout with break points
  - Add e-mail submission form
  - Fix youtube link scaling

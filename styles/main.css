@@ -27,8 +27,10 @@ Contents
   --ff-mono: 'Roboto Mono', monospace;
 
   --padding-master: max(2rem, 8%);
-  --navigation-height: 3rem;
-  --logo-height: 1.5rem; /* should be half nav-height */
+  --navigation-height: 4rem;
+
+  --font-scaling-title: clamp(1.25rem, 6vw, 2rem);
+  --font-scaling-sub: clamp(0.5rem, 5vw, 1rem);
 }
 
 /* Typography */
@@ -64,14 +66,13 @@ footer {
 }
 
 .hero-text {
-  max-width: 25rem;
   text-align: center;
   margin: 0 auto;
   padding: 0 var(--padding-master);
 }
 
 .headline {
-  font-size: 2.5rem;
+  font-size: var(--font-scaling-title);
   font-weight: 600;
   color: var(--clr-white);
   padding-top: 1.5rem;
@@ -82,12 +83,13 @@ footer {
 }
 
 .byline {
+  font-size: var(--font-scaling-sub);
   font-weight: 400;
   max-width: 15rem;
   margin: 0 auto;
   color: var(--clr-white);
   padding-top: 1.5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 /* Call to Action */
@@ -98,7 +100,7 @@ footer {
 }
 
 .listen-container {
-  max-width: 400px;
+  max-width: 25rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -118,7 +120,7 @@ footer {
 }
 
 .listen-now {
-  font-size: 2rem;
+  font-size: var(--font-scaling-title);
   font-weight: 400;
   max-width: 25rem;
   margin: 0 auto;
@@ -157,18 +159,32 @@ footer {
 .socials {
   color: var(--clr-red);
   text-transform: uppercase;
-  font-size: 2rem;
-  line-height: 2.125rem;
-  max-width: 20rem;
+  font-size: var(--font-scaling-title);
+  line-height: 1.5rem;
+  max-width: 12rem;
+  font-weight: 400;
   margin: 0 auto;
 }
 
 .like-subscribe {
   color: var(--clr-gold);
   text-transform: uppercase;
+  font-size: var(--font-scaling-sub);
   line-height: 1.125rem;
-  font-weight: 400;
+  font-weight: 300;
+  max-width: 10rem;
   padding: 1rem 0;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 510px) {
+  .socials {
+    max-width: 35rem;
+  }
+
+  .like-subscribe {
+    max-width: 50rem;
+  }
 }
 
 .youtube-link {
@@ -177,7 +193,7 @@ footer {
   max-width: 720px;
   padding-bottom: 56.25%; 
   height: 0;  
-  margin: 3rem auto;
+  margin: 2rem auto;
 
 }
 .youtube-link iframe {
@@ -226,31 +242,34 @@ footer {
 .section-mailing-list {
   background-color: var(--clr-white);
   text-align: center;
-  padding: 4rem var(--padding-master);
+  padding: 3rem var(--padding-master);
   color: var(--clr-blue);
 }
 
 .first-to-know {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: var(--font-scaling-title);
   font-weight: 700;
 }
 
 .mailing-action {
-  font-weight: 400;
-  padding: .5rem;
+  font-size: var(--font-scaling-sub);
+  font-weight: 300;
+  padding: 1rem 0 2rem 0;
+  max-width: 13rem;
+  margin: 0 auto;
 }
 
-/* large screen size 
-.listen-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: 
-    "anchor anchor apple spotify"
-    "anchor anchor youtube google";
-  align-items: center;
-  justify-items: center;
-  margin: auto;
+@media screen and (min-width: 400px) {
+  .mailing-action {
+    max-width: 22rem;
+  }
+}
 
-} */
+.section-mailing-list input {
+  width: 100%;
+  border: 1px solid var(--clr-blue);
+  border-radius: 0.25rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+}
