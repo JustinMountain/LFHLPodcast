@@ -155,8 +155,28 @@ footer {
 }
 
 .section-call-to-action img {
-  max-width: 95%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  transition: scale 2000ms ease-in-out 120ms;
+}
+
+.listen-large {
   border-radius: 2rem;
+}
+
+.listen-large:hover,
+.listen-large:focus {
+  transform: scale(1.1);
+}
+
+.listen-small {
+  border-radius: 100vw;
+}
+
+.listen-small:hover,
+.listen-small:focus {
+  transform: scale(1.2);
 }
 
 .listen-now {
@@ -190,6 +210,7 @@ footer {
 
 #listen-apple {
   grid-area: apple;
+  border-radius: 100vw;
 }
 
 #listen-spotify {
@@ -304,12 +325,23 @@ footer {
 }
 
 .all-platforms img {
-  max-width: 95%;
+  max-width: 100%;
   border-radius: 2rem;
+  margin: auto;
+  transition: scale 75ms ease-in-out 120ms;
 }
 
 .all-platforms div {
   padding: 0 0.5rem;
+}
+
+.social-hover {
+  border-radius: 100vw;
+}
+
+.social-hover:hover,
+.social-hover:focus {
+  transform: scale(1.2);
 }
 
 #social-youtube {

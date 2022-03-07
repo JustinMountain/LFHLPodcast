@@ -1,5 +1,9 @@
 # LFHLPodcast
 
+2022-03-07
+ - Added all appropriate links
+ - Links in page grow on hover
+
 2022-03-06
  - Changed Mailing List to Contact Us
  - Styled contact us link 
@@ -30,6 +34,5 @@
  - Initialized files, CSS Reset, HTML Boilerplate
 
 TODO:
- - Customize scrollbar
- - Add all appropriate links
+ - Before/after styling no longer work in navbar?
  - API to search for latest YouTube/Insta posts
